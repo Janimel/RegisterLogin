@@ -48,52 +48,43 @@ class Register extends React.Component {
                     <div className="inputBox">
                         <span>Student ID Number</span>
                         <div className="box">
-                            <input type="text" name="studentid" onChange={this.handleChange} />
+                            <input type="text" name="studentid" onChange={this.handleChange}  placeholder = "i.e. 2017556891"/>
                         </div>
                     </div>
 
                     <div className="inputBox"> 
                         <div>
-                            <span>FirstName</span>
+                            <span>Full Name</span>
                             <div className="box">
-                                <input type="text" name="fname" onChange={this.handleChange} />
+                                <input type="text" name="fname" onChange={this.handleChange} placeholder = "First Name"/>
+                                <input type="text" name="mname" onChange={this.handleChange} placeholder = "Middle Name"/>
+                                <input type="text" name="lname" onChange={this.handleChange} placeholder = "Last Name"/>
                             </div>
+                            
                         </div>
 
-                        <div>
-                            <span>MiddleName</span>
-                            <div className="box">
-                                <input type="text" name="mname" onChange={this.handleChange} />
-                            </div>
-                        </div>
-
-                        <div>
-                            <span>LastName</span>
-                            <div className="box">
-                                <input type="text" name="lname" onChange={this.handleChange} />
-                            </div>
-                        </div>
                     </div>
+
 
                     <div className="inputBox">
                         <div>
                             <span>College</span>
                             <div className="box">
-                                <input type="text" name="college" onChange={this.handleChange} />
+                                <input type="text" name="college" onChange={this.handleChange}  placeholder = "University of Santo Tomas"/>
                             </div>
                         </div>
 
                         <div>
                             <span>Program Enrolled</span>
                             <div className="box">
-                                <input type="text" name="program" onChange={this.handleChange} />
+                                <input type="text" name="program" onChange={this.handleChange}  placeholder = "Bachelor of Science in Information Technology"/>
                             </div>
                         </div>
 
                         <div>
                             <span>Year Level</span>
                             <div className="box">
-                                <input type="text" name="yearlevel" onChange={this.handleChange} />
+                                <input type="text" name="yearlevel" onChange={this.handleChange}  placeholder = "First Year"/>
                             </div>
                         </div>
                     </div>
@@ -102,14 +93,14 @@ class Register extends React.Component {
                         <div>
                             <span>Password</span>
                             <div className="box">
-                                <input type="password" name="password" onChange={this.handleChange} />
+                                <input type="password" name="password" onChange={this.handleChange}  placeholder = "Must have atleast 10 characters" />
                             </div>
                         </div>
 
                         <div>
-                            <span>ConfirmPassword</span>
+                            <span>Confirm Password</span>
                             <div className="box">
-                                <input type="text" name="confirm" onChange={this.handleChange} />
+                                <input type="password" name="confirm" onChange={this.handleChange}  placeholder = "Confirm Password"/>
                             </div>
                         </div>
                     </div>

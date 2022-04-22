@@ -48,23 +48,30 @@ class Login extends React.Component{
             <h3>Log In</h3>
             <div className="inputBox">
                 <span>Student ID Number</span>
-                <div className="box">
+                    <div className="box">
+                    <input onChange={this.handleChange} type="text" name="studentid"/>
+                    </div>
+
+                {/* <div className="box">
                 <div className="icon">
                     <img src={usernameicon} alt="Username Icon" width={30} height={30}/>
                 </div>
                 <input onChange={this.handleChange} type="text" name="studentid"/>
-
-                </div>
+                </div> */}
             </div>
 
             <div className="inputBox">
                 <span>Password</span>
                 <div className="box">
+                <input onChange={this.handleChange} type="password" name="password"/>
+                </div>
+                
+                {/* <div className="box">
                 <div className="icon">
                     <img src={passwordicon} alt="Password Icon" width={30} height={30}/>
                 </div>
                 <input onChange={this.handleChange} type="password" name="password"/>
-                </div>
+                </div> */}
             </div>
 
             <label>
@@ -79,7 +86,7 @@ class Login extends React.Component{
                 </div>
             </div>
 
-            <a className="forgot">Forgot the password?</a>
+            <a className="forgot">Forgot Password?</a>
 
 
             </form>
