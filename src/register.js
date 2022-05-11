@@ -28,27 +28,30 @@ class Register extends React.Component {
         const value = event.target && event.target.value;
         this.setState({ [name]: value });
     }
-    handleSubmit(event) {
 
-        if (this.state.password === this.state.cpassword) {
+    handleSubmit() {
+        if (this.state.password === this.state.confirm) {
             localStorage.setItem('user', JSON.stringify(this.state))
+            alert ('Your data is being saved')
         } else {
-            alert('Password not match!!!')
+            alert('Password does not match')
         }
     }
+
     reset() {
         window.reload();
     }
+
     render() {
         return (
 
             <div className="container">
-                <form onSubmit={this.submit}>
+                <form onSubmit={this.handleSubmit}>
                     <h3>Register</h3>
                     <div className="inputBox">
                         <span>Student ID Number</span>
                         <div className="box">
-                            <input type="text" name="studentid" onChange={this.handleChange}  placeholder = "i.e. 2017556891"/>
+                            <input type="text" name="studentid" onChange={this.handleChange} placeholder = "i.e. 2017556891" pattern="[0-9]{10}" required/>
                         </div>
                     </div>
 
@@ -56,9 +59,9 @@ class Register extends React.Component {
                         <div>
                             <span>Full Name</span>
                             <div className="box">
-                                <input type="text" name="fname" onChange={this.handleChange} placeholder = "First Name"/>
-                                <input type="text" name="mname" onChange={this.handleChange} placeholder = "Middle Name"/>
-                                <input type="text" name="lname" onChange={this.handleChange} placeholder = "Last Name"/>
+                                <input type="text" name="fname" onChange={this.handleChange} placeholder = "First Name" required/>
+                                <input type="text" name="mname" onChange={this.handleChange} placeholder = "Middle Name" required/>
+                                <input type="text" name="lname" onChange={this.handleChange} placeholder = "Last Name" required/>
                             </div>
                             
                         </div>
@@ -70,21 +73,21 @@ class Register extends React.Component {
                         <div>
                             <span>College</span>
                             <div className="box">
-                                <input type="text" name="college" onChange={this.handleChange}  placeholder = "University of Santo Tomas"/>
+                                <input type="text" name="college" onChange={this.handleChange}  placeholder = "University of Santo Tomas" required/>
                             </div>
                         </div>
 
                         <div>
                             <span>Program Enrolled</span>
                             <div className="box">
-                                <input type="text" name="program" onChange={this.handleChange}  placeholder = "Bachelor of Science in Information Technology"/>
+                                <input type="text" name="program" onChange={this.handleChange}  placeholder = "Bachelor of Science in Information Technology" required/>
                             </div>
                         </div>
 
                         <div>
                             <span>Year Level</span>
                             <div className="box">
-                                <input type="text" name="yearlevel" onChange={this.handleChange}  placeholder = "First Year"/>
+                                <input type="text" name="yearlevel" onChange={this.handleChange}  placeholder = "First Year" required/>
                             </div>
                         </div>
                     </div>
@@ -93,14 +96,14 @@ class Register extends React.Component {
                         <div>
                             <span>Password</span>
                             <div className="box">
-                                <input type="password" name="password" onChange={this.handleChange}  placeholder = "Must have atleast 10 characters" />
+                                <input type="password" name="password" onChange={this.handleChange}  placeholder = "At least 8 characters, 1 special character, 1 uppercase letter, and 1 number" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
                             </div>
                         </div>
 
                         <div>
                             <span>Confirm Password</span>
                             <div className="box">
-                                <input type="password" name="confirm" onChange={this.handleChange}  placeholder = "Confirm Password"/>
+                                <input type="password" name="confirm" onChange={this.handleChange}  placeholder = "Confirm Password" required/>
                             </div>
                         </div>
                     </div>

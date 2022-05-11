@@ -8,9 +8,9 @@
 }
 
 :root {
-  --dark-dimmed: #2f363e;
-  --accent: #ffcc33;
-  --accent-dimmed: #ffcc33;
+  --dark-dimmed: #5E3535;
+  --accent: #418441;
+  --accent-dimmed: #418441;
   --light: #fff;
 }
 
@@ -79,7 +79,7 @@ form {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.75em;
+  font-size: 16px;
   border-left: 4px solid #fff;
   padding-left: 4px;
   line-height: 1em;
